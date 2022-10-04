@@ -1,16 +1,15 @@
-#!/bin/bas
+#!/bin/bash
 
 PS3="Select the operation: "
 
-select opt in text json quit; do
+select opt in text json; do
   case $opt in
     text)
-      echo "wtfismyip.com/text"
+      curl wtfismyip.com/text
+      break
       ;;
     json)
-      echo "wtfismyip.com/json"
-      ;;
-    quit)
+      curl wtfismyip.com/json
       break
       ;;
     *) 
